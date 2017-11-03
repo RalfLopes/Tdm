@@ -1,5 +1,6 @@
 {
-  "name": "Tdm",
-  "app_id": "",
-  "type": "ionic-angular"
+  "name": "MyIonicProject",
+  "app_id": "33d8e438",
+  "type": "ionic-angular",
+  "integrations": {}
 }
