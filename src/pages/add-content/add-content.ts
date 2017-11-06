@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-
-	selector: 'page-add-content',
-	templateURL:'add.html'
+  selector: 'page-hello-ionic',
+  templateUrl: 'add-content.html'
 })
+export class addContent {
+  constructor() {
 
-export class AddContent {
-
-	constructor(){
-
-	}
+  }
 }
