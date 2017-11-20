@@ -1,6 +1,6 @@
 {
-  "name": "MyIonicProject",
-  "app_id": "33d8e438",
+  "name": "myApp",
+  "app_id": "b063d05b",
   "type": "ionic-angular",
   "integrations": {}
 }

@@ -1,20 +1,15 @@
-<ion-menu [content]="content">
 
-  <ion-header>
-  
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-menu [content]="conteudo">
+    <ion-content>
+    	
+    	<ion-list>
+    		<button ion-item (click)="openPage(home)" menuClose>Home</button>
+    		<button ion-item (click)="openPage(contas)" menuClose>Contas</button>
+    		
+    	</ion-list>
+    </ion-content>
+  </ion-menu>
 
-  <ion-content>
-    <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
 
-</ion-menu>
 
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" #conteudo></ion-nav>
