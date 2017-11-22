@@ -25689,3 +25689,11 @@ home-css .imagem {
   height: 100%;
   position: absolute;
 }
+
+itens #cont {
+  text-align: center;
+}
+
+itens #foot {
+  background: #222;
+}

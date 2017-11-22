@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController} from  'ionic-angular';
 import { Camera, CameraOptions }from '@ionic-native/camera';
 
+
 @Component({
   selector: 'itens',
   templateUrl: 'itens.html'
@@ -10,14 +11,28 @@ export class ItensPage {
 
 	public foto:any;
   public base64Image:string;
-  constructor(public navCtrl: NavController, private camera: Camera){
-  		this.conta= {desc:""};
+  constructor(public navCtrl: NavController, private camera: Camera ){
+  		this.conta= {id:'',desc:""};
   		this.list=[];	
-
+   
   } 
 
   salvar(){	
-    this.list.push({descricao:this.conta.desc}); 
+    
+      this.conta.id=(this.list.length+1);
+      this.list.push({id:this.conta.id,  descricao:this.conta.desc}); 
+       
+  
+}
+  remove(){
+    this.list.pop();
+  }
+
+  update(id){
+    this.conta.id;
+    this.list[{id:id,  descricao:this.conta.desc}]; 
+    alert(this.list[{id:id,  descricao:this.conta.desc}]);
+
   }
 
   ngOnInit(){

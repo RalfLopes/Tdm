@@ -9,20 +9,34 @@
 
 
 <ion-content padding>
-<ion-list>
-  <ion-item>
-    <ion-label color="primary">Nome: </ion-label>
-    <ion-input placeholder="Digite seu nome aqui " [(ngModel)]="conta.desc"></ion-input>
-  </ion-item>
-  </ion-list>
-  
-  <button ion-button (click)="salvar()" ><ion-icon name="add-circle"></ion-icon></button>
-  <ion-list>
-  	<ion-item *ngFor="let item of list">
-  	{{item.descricao}}
+  <ion-grid>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary">Nome: </ion-label>
+      <ion-input placeholder="Digite seu nome aqui " [(ngModel)]="conta.desc"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col col-md-5 col-sm-12 id="cont">
+    
+      <button ion-button (click)="salvar()" ><ion-icon name="add-circle"></ion-icon></button>
+      <button ion-button (click)="remove()" ><ion-icon name="md-remove-circle"></ion-icon></button>
 
-  	</ion-item>
-  </ion-list>
-<button ion-button (click)="pegaFoto()"> <ion-icon name="md-camera"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+    
+      <button ion-button (click)="pegaFoto()"> <ion-icon name="md-camera"></ion-icon></button>
+    
+    <ion-list>
+      <ion-item >
+        <button ion-item *ngFor="let item of list" (click)="update(item)">
+
+          {{item.descricao}}
+        </button>
+      </ion-item>
+    </ion-list>
+
+  </ion-grid>
+
 
 </ion-content>
